@@ -13,6 +13,8 @@ $(document).ready(function () {
             $('#followers').html(json.followers);
             $('#following').html(json.following);
             $('#link').attr('href', json.html_url);
-        });
-
+        })
+        .catch(function(erro) {
+            alert('Ocorreu um erro ao receber os dados do perfil do gitHub, tente novamente mais tarde')
+        })
 });
